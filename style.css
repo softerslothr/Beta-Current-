@@ -1,0 +1,220 @@
+/* ---------- Global Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Consolas", sans-serif;
+}
+
+body {
+  background-color: #0b0b0c;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ---------- Header ---------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #ff1a4d, #ff66b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ff4d88;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  height: 100vh;
+  background: url('xyrbg.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10%;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.hero h2, .hero p, .copy-ip {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  text-shadow: 0 0 30px #000;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease;
+  background: linear-gradient(90deg, #ff1a4d, #ff66b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: #eee;
+  animation: fadeIn 3s ease;
+}
+
+.copy-ip {
+  background: linear-gradient(90deg, #ff1a4d, #ff66b2);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.3s;
+  animation: fadeIn 4s ease;
+  box-shadow: 0 0 20px rgba(255, 26, 77, 0.6);
+}
+
+.copy-ip:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 102, 178, 0.8);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff1a4d, #ff66b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* ---------- Features ---------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-box {
+  background: #1a1f25;
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(255, 102, 178, 0.3);
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 51, 128, 0.5);
+}
+
+.feature-box h4 {
+  color: #ff4d88;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* ---------- Rules ---------- */
+ul.rules {
+  list-style: none;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+ul.rules li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 102, 178, 0.2);
+  color: #bbb;
+}
+
+/* ---------- Join Section ---------- */
+#join a {
+  color: #ff66b2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#join a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #0d1117;
+  text-align: center;
+  padding: 25px 0;
+  color: #999;
+  font-size: 0.9rem;
+  border-top: 2px solid rgba(255, 51, 128, 0.4);
+}
+
+footer a {
+  color: #ff66b2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+}
