@@ -1,14 +1,28 @@
+/* ---------- Root Variables ---------- */
+:root {
+  --bg-dark: #0b0b0c;
+  --accent1: #ff1a4d;
+  --accent2: #ff66b2;
+  --text-light: #fff;
+  --text-muted: #ccc;
+  --box-bg: #1a1f25;
+}
+
 /* ---------- Global Styles ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Consolas", sans-serif;
+  font-family: "Chicago", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #0b0b0c;
-  color: #fff;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
   overflow-x: hidden;
 }
 
@@ -17,18 +31,20 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 12, 0.4); /* More translucent */
+  backdrop-filter: blur(15px);
   z-index: 1000;
   padding: 15px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 102, 178, 0.2);
+  transition: background 0.4s ease;
 }
 
 header h1 {
   font-size: 1.8rem;
-  background: linear-gradient(90deg, #ff1a4d, #ff66b2);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
@@ -36,15 +52,17 @@ header h1 {
 }
 
 nav a {
-  color: #fff;
+  color: var(--text-light);
   margin-left: 20px;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s, border-bottom 0.3s;
   font-weight: 500;
+  padding-bottom: 4px;
 }
 
 nav a:hover {
-  color: #ff4d88;
+  color: var(--accent2);
+  border-bottom: 2px solid var(--accent2);
 }
 
 /* ---------- Hero Section ---------- */
@@ -81,7 +99,7 @@ nav a:hover {
   text-shadow: 0 0 30px #000;
   margin-bottom: 20px;
   animation: fadeIn 2s ease;
-  background: linear-gradient(90deg, #ff1a4d, #ff66b2);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -95,7 +113,7 @@ nav a:hover {
 }
 
 .copy-ip {
-  background: linear-gradient(90deg, #ff1a4d, #ff66b2);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   color: #fff;
   padding: 12px 25px;
   border: none;
@@ -126,7 +144,7 @@ section {
 section h3 {
   font-size: 2rem;
   margin-bottom: 20px;
-  background: linear-gradient(90deg, #ff1a4d, #ff66b2);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -134,7 +152,7 @@ section h3 {
 section p {
   max-width: 800px;
   margin: 0 auto;
-  color: #ccc;
+  color: var(--text-muted);
   line-height: 1.8;
 }
 
@@ -147,7 +165,7 @@ section p {
 }
 
 .feature-box {
-  background: #1a1f25;
+  background: var(--box-bg);
   padding: 30px;
   border-radius: 12px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -160,7 +178,7 @@ section p {
 }
 
 .feature-box h4 {
-  color: #ff4d88;
+  color: var(--accent2);
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
@@ -181,7 +199,7 @@ ul.rules li {
 
 /* ---------- Join Section ---------- */
 #join a {
-  color: #ff66b2;
+  color: var(--accent2);
   text-decoration: none;
   font-weight: 600;
 }
@@ -201,7 +219,7 @@ footer {
 }
 
 footer a {
-  color: #ff66b2;
+  color: var(--accent2);
   text-decoration: none;
 }
 
@@ -217,6 +235,7 @@ footer a:hover {
   header h1 {
     font-size: 1.4rem;
   }
+  section {
+    padding: 60px 5%;
+  }
 }
-
-
