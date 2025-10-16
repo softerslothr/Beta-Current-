@@ -25,21 +25,20 @@ body {
   color: var(--text-light);
   overflow-x: hidden;
 }
-
 /* ---------- Header ---------- */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(10, 10, 12, 0.4); /* More translucent */
-  backdrop-filter: blur(15px);
+  background: transparent; /* fully see-through */
+  backdrop-filter: none;   /* remove blur */
   z-index: 1000;
   padding: 15px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 102, 178, 0.2);
-  transition: background 0.4s ease;
+  border: none;             /* remove border line */
+  transition: none;
 }
 
 header h1 {
@@ -239,3 +238,4 @@ footer a:hover {
     padding: 60px 5%;
   }
 }
+
