@@ -50,7 +50,7 @@ nav a:hover {
 /* ---------- Hero Section ---------- */
 .hero {
   height: 100vh;
-  
+  background: url('xyrbg.png') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -218,4 +218,5 @@ footer a:hover {
     font-size: 1.4rem;
   }
 }
+
 
