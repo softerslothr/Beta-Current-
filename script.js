@@ -4,3 +4,4 @@ function copyIP() {
       alert("Server IP copied: play.xyrealn.com");
 
     }
+    j
