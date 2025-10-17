@@ -1,3 +1,4 @@
+
 function copyIP() {
       navigator.clipboard.writeText("play.xyrealn.com");
       alert("Server IP copied: play.xyrealn.com");
@@ -20,3 +21,4 @@ async function getServerStatus() {
     statusElement.textContent = 'Unable to check status.';
   }
 }
+
