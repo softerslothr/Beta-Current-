@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Klavika", sans-serif;
+  font-family: "Consolas", sans-serif;
 }
 
 html {
@@ -238,5 +238,6 @@ footer a:hover {
     padding: 60px 5%;
   }
 }
+
 
 
