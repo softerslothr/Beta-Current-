@@ -14,7 +14,7 @@ async function getServerStatus() {
     const data = await response.json();
 
     if (data.online) {
-      statusElement.textContent = `Online with ${data.players.online}/${data.players.max} players!`;
+      statusElement.textContent = `Online with ${data.players.online}/${data.players.max} players`;
     } else {
       statusElement.textContent = 'Server is offline.';
     }
@@ -24,3 +24,4 @@ async function getServerStatus() {
 }
 
 getServerStatus();
+
